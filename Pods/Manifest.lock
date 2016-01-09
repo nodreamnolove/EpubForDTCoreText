@@ -10,12 +10,15 @@ PODS:
     - DTFoundation/Core
   - DTFoundation/UIKit (1.7.9):
     - DTFoundation/Core
+  - ZipArchive (1.4.0)
 
 DEPENDENCIES:
   - DTCoreText (~> 1.6.16)
+  - ZipArchive (~> 1.4.0)
 
 SPEC CHECKSUMS:
   DTCoreText: 3ea8bba23dd2141ba18adb227a7dd33a822df1c4
   DTFoundation: 70a0765e3596f82dd421832e95c65e2166eb3102
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

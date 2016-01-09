@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B9F32E1C4010800037FB7A /* EpubMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B9F32D1C4010800037FB7A /* EpubMainViewController.m */; };
 		3BC07809E1452AAB952B62B3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D023DEA94784C036DF1C44 /* libPods.a */; };
 		AED352221C3EB0F400BEE03B /* 西游记.epub in Resources */ = {isa = PBXBuildFile; fileRef = AED352211C3EB0F400BEE03B /* 西游记.epub */; };
 		AED352241C3EB20600BEE03B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED352231C3EB20600BEE03B /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04B9F32C1C4010800037FB7A /* EpubMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpubMainViewController.h; sourceTree = "<group>"; };
+		04B9F32D1C4010800037FB7A /* EpubMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpubMainViewController.m; sourceTree = "<group>"; };
 		41D023DEA94784C036DF1C44 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		65902145BD27B682BA5640B6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AED352211C3EB0F400BEE03B /* 西游记.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "西游记.epub"; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 		AEFD5C721C32873800F4DDB2 /* EpubForDTCoreText */ = {
 			isa = PBXGroup;
 			children = (
+				04B9F32C1C4010800037FB7A /* EpubMainViewController.h */,
+				04B9F32D1C4010800037FB7A /* EpubMainViewController.m */,
 				AEFD5C761C32873800F4DDB2 /* AppDelegate.h */,
 				AEFD5C771C32873800F4DDB2 /* AppDelegate.m */,
 				AEFD5C791C32873800F4DDB2 /* ViewController.h */,
@@ -183,6 +188,7 @@
 				AEFD5C6D1C32873800F4DDB2 /* Frameworks */,
 				AEFD5C6E1C32873800F4DDB2 /* Resources */,
 				768CF8EE53962431EE031895 /* Copy Pods Resources */,
+				EEEA0B0F02299B97392C5973 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,6 +337,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		EEEA0B0F02299B97392C5973 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -341,6 +362,7 @@
 				AEFD5C7B1C32873800F4DDB2 /* ViewController.m in Sources */,
 				AEFD5C781C32873800F4DDB2 /* AppDelegate.m in Sources */,
 				AEFD5C751C32873800F4DDB2 /* main.m in Sources */,
+				04B9F32E1C4010800037FB7A /* EpubMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
