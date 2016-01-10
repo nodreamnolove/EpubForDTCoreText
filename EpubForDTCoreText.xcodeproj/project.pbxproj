@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		04B9F32E1C4010800037FB7A /* EpubMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B9F32D1C4010800037FB7A /* EpubMainViewController.m */; };
 		3BC07809E1452AAB952B62B3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D023DEA94784C036DF1C44 /* libPods.a */; };
-		AED352221C3EB0F400BEE03B /* 西游记.epub in Resources */ = {isa = PBXBuildFile; fileRef = AED352211C3EB0F400BEE03B /* 西游记.epub */; };
+		AE8285111C41FD6000413A70 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8285101C41FD6000413A70 /* libxml2.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
+		AE8285131C41FDA800413A70 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8285121C41FDA800413A70 /* libxml2.2.tbd */; };
+		AE8285161C42043300413A70 /* GetXMLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8285151C42043300413A70 /* GetXMLObject.m */; };
+		AE8285181C42544100413A70 /* iOS应用逆向工程.epub in Resources */ = {isa = PBXBuildFile; fileRef = AE8285171C42544100413A70 /* iOS应用逆向工程.epub */; };
 		AED352241C3EB20600BEE03B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED352231C3EB20600BEE03B /* CoreGraphics.framework */; };
 		AEFD5C751C32873800F4DDB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFD5C741C32873800F4DDB2 /* main.m */; };
 		AEFD5C781C32873800F4DDB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFD5C771C32873800F4DDB2 /* AppDelegate.m */; };
@@ -43,7 +46,11 @@
 		04B9F32D1C4010800037FB7A /* EpubMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpubMainViewController.m; sourceTree = "<group>"; };
 		41D023DEA94784C036DF1C44 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		65902145BD27B682BA5640B6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		AED352211C3EB0F400BEE03B /* 西游记.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "西游记.epub"; sourceTree = "<group>"; };
+		AE8285101C41FD6000413A70 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		AE8285121C41FDA800413A70 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		AE8285141C42043300413A70 /* GetXMLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetXMLObject.h; path = ../GetXMLObject.h; sourceTree = "<group>"; };
+		AE8285151C42043300413A70 /* GetXMLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetXMLObject.m; path = ../GetXMLObject.m; sourceTree = "<group>"; };
+		AE8285171C42544100413A70 /* iOS应用逆向工程.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iOS应用逆向工程.epub"; sourceTree = "<group>"; };
 		AED352231C3EB20600BEE03B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AEFD5C701C32873800F4DDB2 /* EpubForDTCoreText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EpubForDTCoreText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEFD5C741C32873800F4DDB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8285131C41FDA800413A70 /* libxml2.2.tbd in Frameworks */,
+				AE8285111C41FD6000413A70 /* libxml2.tbd in Frameworks */,
 				AED352241C3EB20600BEE03B /* CoreGraphics.framework in Frameworks */,
 				3BC07809E1452AAB952B62B3 /* libPods.a in Frameworks */,
 			);
@@ -94,6 +103,8 @@
 		350E2D11225FB2840B0A8C3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE8285121C41FDA800413A70 /* libxml2.2.tbd */,
+				AE8285101C41FD6000413A70 /* libxml2.tbd */,
 				AED352231C3EB20600BEE03B /* CoreGraphics.framework */,
 				41D023DEA94784C036DF1C44 /* libPods.a */,
 			);
@@ -136,6 +147,8 @@
 			children = (
 				04B9F32C1C4010800037FB7A /* EpubMainViewController.h */,
 				04B9F32D1C4010800037FB7A /* EpubMainViewController.m */,
+				AE8285141C42043300413A70 /* GetXMLObject.h */,
+				AE8285151C42043300413A70 /* GetXMLObject.m */,
 				AEFD5C761C32873800F4DDB2 /* AppDelegate.h */,
 				AEFD5C771C32873800F4DDB2 /* AppDelegate.m */,
 				AEFD5C791C32873800F4DDB2 /* ViewController.h */,
@@ -152,7 +165,7 @@
 		AEFD5C731C32873800F4DDB2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AED352211C3EB0F400BEE03B /* 西游记.epub */,
+				AE8285171C42544100413A70 /* iOS应用逆向工程.epub */,
 				AEFD5C741C32873800F4DDB2 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -188,7 +201,6 @@
 				AEFD5C6D1C32873800F4DDB2 /* Frameworks */,
 				AEFD5C6E1C32873800F4DDB2 /* Resources */,
 				768CF8EE53962431EE031895 /* Copy Pods Resources */,
-				EEEA0B0F02299B97392C5973 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,8 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEFD5C831C32873800F4DDB2 /* LaunchScreen.storyboard in Resources */,
-				AED352221C3EB0F400BEE03B /* 西游记.epub in Resources */,
 				AEFD5C801C32873800F4DDB2 /* Assets.xcassets in Resources */,
+				AE8285181C42544100413A70 /* iOS应用逆向工程.epub in Resources */,
 				AEFD5C7E1C32873800F4DDB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,21 +349,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EEEA0B0F02299B97392C5973 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -363,6 +360,7 @@
 				AEFD5C781C32873800F4DDB2 /* AppDelegate.m in Sources */,
 				AEFD5C751C32873800F4DDB2 /* main.m in Sources */,
 				04B9F32E1C4010800037FB7A /* EpubMainViewController.m in Sources */,
+				AE8285161C42043300413A70 /* GetXMLObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +504,7 @@
 			baseConfigurationReference = C4D9584A70077B57904F6BC7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: menghu hu (E372H9S5YK)";
 				INFOPLIST_FILE = EpubForDTCoreText/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -520,7 +518,7 @@
 			baseConfigurationReference = 65902145BD27B682BA5640B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: menghu hu (E372H9S5YK)";
 				INFOPLIST_FILE = EpubForDTCoreText/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

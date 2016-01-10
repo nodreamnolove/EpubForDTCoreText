@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ASIHTTPRequest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DTCoreText.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,7 +19,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GDataXML-HTML.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TouchXML.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ZipArchive.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>467F968E310C4B67307D792C1B4E24D7</key>
+		<key>037CF9AF7CA74AB7C8EC7EBED2731314</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4CC6DAADA5AC18859B886C3EBC7D9876</key>
+		<key>1893DE70459B9C5430E1E53597BF9817</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F0A216A931F1180F9792ACAB9E25D59B</key>
+		<key>846F41652CD89AB1AAAD919CCB5C3E81</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>925F35499C79BF49E9CE6C2E58E4018F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>981EDC591E68565CA5C84936F3E103C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AECAA8797E58D6D85927F36010245D5B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2E2E5C76A525C2896B739D66D7641AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF2AFC9F01A162DDA35576F09F4E121F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

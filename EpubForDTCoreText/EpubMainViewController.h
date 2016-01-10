@@ -10,4 +10,7 @@
 
 @interface EpubMainViewController : UIViewController
 
+@property (nonatomic,strong) NSString * filePath;
+
+
 @end

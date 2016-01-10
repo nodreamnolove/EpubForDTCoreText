@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "EpubMainViewController.h"
+#import "ZipArchive.h"
 @interface ViewController ()
 
 @end
@@ -30,8 +31,24 @@
 }
 -(void)goEpub
 {
-    EpubMainViewController *epubVC = [[EpubMainViewController alloc]init];
-    [self.navigationController pushViewController:epubVC animated:YES];
+ 
+    NSString *filepath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]stringByAppendingPathComponent:@"iOS应用逆向工程"];
+    NSString *sourceFile = [[NSBundle mainBundle]pathForResource:@"iOS应用逆向工程" ofType:@"epub"];
+    if ([[NSFileManager defaultManager]fileExistsAtPath:sourceFile]) {
+        ZipArchive *zip = [[ZipArchive alloc]init];
+        if([zip UnzipOpenFile:sourceFile]){
+        
+            [zip UnzipFileTo:filepath overWrite:NO];
+        }
+        [zip UnzipCloseFile];
+    }
+    BOOL isDirectory;
+    if ([[NSFileManager defaultManager]fileExistsAtPath:filepath isDirectory:&isDirectory]) {
+        EpubMainViewController *epubVC = [[EpubMainViewController alloc]init];
+        epubVC.filePath = filepath;
+        [self.navigationController pushViewController:epubVC animated:YES];
+    }
+    
 }
 
 
