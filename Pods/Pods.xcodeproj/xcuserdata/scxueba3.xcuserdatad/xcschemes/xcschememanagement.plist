@@ -4,71 +4,75 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ASIHTTPRequest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>DTCoreText.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>DTFoundation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>GDataXML-HTML.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Reachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>TouchXML.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>ZipArchive.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>037CF9AF7CA74AB7C8EC7EBED2731314</key>
+		<key>1893DE70459B9C5430E1E53597BF9817</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1893DE70459B9C5430E1E53597BF9817</key>
+		<key>201CAA15514E1D8D26F07E7C11B12EB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>353AB388A6A46830271C7EDF4D801231</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4333C1887BA4217F6C52A77AC1CE523C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7A1453ABABF729A2A002C4C32AC57FB6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -78,17 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>925F35499C79BF49E9CE6C2E58E4018F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>981EDC591E68565CA5C84936F3E103C2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AECAA8797E58D6D85927F36010245D5B</key>
+		<key>86017B1195AA93CC8917E1F07706FFC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -98,7 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FF2AFC9F01A162DDA35576F09F4E121F</key>
+		<key>FC006CF03D8F5E6735BD79C6474E9847</key>
 		<dict>
 			<key>primary</key>
 			<true/>

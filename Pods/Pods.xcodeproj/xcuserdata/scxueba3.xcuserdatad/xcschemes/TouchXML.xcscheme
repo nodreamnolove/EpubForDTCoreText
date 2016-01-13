@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "10B1817E808ACC6953BEC216"
+               BlueprintIdentifier = "66BD63CBD8E987612AE29400"
                BuildableName = "libTouchXML.a"
                BlueprintName = "TouchXML"
                ReferencedContainer = "container:Pods.xcodeproj">

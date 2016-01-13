@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "EpubMainViewController.h"
 #import "ZipArchive.h"
+#import "downLoadVC.h"
+#import "AFNdownLoadVC.h"
 //@"shengcai123" 密码
 //http://www.100eshu.com/uploads/ebook/b2f9a6fe1b1a4a159dd39fe38b09ac24/mobile/b2f9a6fe1b1a4a159dd39fe38b09ac24.zip
 @interface ViewController ()
@@ -27,7 +29,7 @@
 //    [goEpubBtn addTarget:self action:@selector(goEpub) forControlEvents:UIControlEventTouchUpInside];
 //    [self.view addSubview:goEpubBtn];
 //    self.view.backgroundColor = [UIColor redColor];
-    UIBarButtonItem *rightBarBut1 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(netClick)];
+    UIBarButtonItem *rightBarBut1 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(netClick)];
     UIBarButtonItem *rightBarBut = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(goEpub)];
     self.navigationItem.rightBarButtonItems = @[rightBarBut1,rightBarBut];
     
@@ -57,7 +59,10 @@
 
 -(void)netClick
 {
+    downLoadVC *DLVC = [downLoadVC new];
     NSLog(@"%s",__FUNCTION__);
+    AFNdownLoadVC *afnVC = [AFNdownLoadVC new];
+    [self.navigationController pushViewController:DLVC animated:YES];
 }
 
 

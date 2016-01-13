@@ -9,6 +9,12 @@
 #import "downLoadVC.h"
 static NSString *session_id = @"test";
 @interface downLoadVC ()<NSURLSessionDelegate,NSURLSessionTaskDelegate,NSURLSessionDownloadDelegate>
+{
+    NSURLSession *downsess;
+    NSURLSessionDownloadTask *downTask;
+    NSData *partDownload;
+}
+
 
 @end
 
@@ -17,39 +23,46 @@ static NSString *session_id = @"test";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
- 
+    UIButton *startBtn =[[ UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+    startBtn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:startBtn];
+    startBtn.center = self.view.center ;
+    [startBtn addTarget:self action:@selector(startDownLoad) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)startDownLoad
 {
-    [super viewDidAppear:animated];
-    [self downfile];
+    
+        
+//        NSURLSessionConfiguration *config = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"test"];
+//        
+//        downsess = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
+        NSString *str1 = @"http://www.100eshu.com/uploads/ebook/b2f9a6fe1b1a4a159dd39fe38b09ac24/mobile/b2f9a6fe1b1a4a159dd39fe38b09ac24.zip";
+        NSString *str2 = @"http://fujian.86516.com/forum/201209/28/16042484m9y9izwbrwuixj.jpg";
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:str1] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:20];
+    
+        if(!downTask){
+            downTask = [self.backgroundSession downloadTaskWithRequest:request];
+            [downTask resume];
+        }
+        
+    
+    
 }
 
-
-/* 创建一个后台session单例 */
-- (NSURLSession *)backgroundSession {
-    static NSURLSession *backgroundSess = nil;
+- (NSURLSession *)backgroundSession
+{
+    static NSURLSession *backgroundSession = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSURLSessionConfiguration *config = [NSURLSessionConfiguration backgroundSessionConfiguration:kBackgroundSessionID];
-        backgroundSess = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
-        backgroundSess.sessionDescription = kBackgroundSession;
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"com.shinobicontrolsn"];
+        config.timeoutIntervalForRequest = 23;
+        backgroundSession = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
     });
-    
-    return backgroundSess;
+    return backgroundSession;
 }
 
-- (IBAction)backgroundDownload:(id)sender {
-    NSString *imageURLStr = @"http://farm3.staticflickr.com/2831/9823890176_82b4165653_b_d.jpg";
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:imageURLStr]];
-    self.backgroundTask = [self.backgroundSession downloadTaskWithRequest:request];
-    
-    [self setDownloadButtonsWithEnabled:NO];
-    self.downloadedImageView.image = nil;
-    
-    [self.backgroundTask resume];
-}
 
 -(void)downfile
 {
@@ -65,16 +78,14 @@ static NSString *session_id = @"test";
     
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configure delegate:self delegateQueue:nil];
-   
-    
-    
+       
     [session downloadTaskWithRequest:request];
 }
 #pragma mark NSURLSessionDelegate
 //session 发生一个系统错误
 - (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(nullable NSError *)error
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 /* If implemented, when a connection level authentication challenge
@@ -90,7 +101,7 @@ static NSString *session_id = @"test";
 - (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
  completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential * __nullable credential))completionHandler
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 /* If an application has received an
@@ -104,7 +115,7 @@ static NSString *session_id = @"test";
 //进入后台操作
 - (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session NS_AVAILABLE_IOS(7_0)
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 #pragma mark NSURLSessionTaskDelegate
@@ -114,7 +125,7 @@ willPerformHTTPRedirection:(NSHTTPURLResponse *)response
         newRequest:(NSURLRequest *)request
  completionHandler:(void (^)(NSURLRequest * __nullable))completionHandler
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 /* The task has received a request specific authentication challenge.
@@ -127,7 +138,7 @@ willPerformHTTPRedirection:(NSHTTPURLResponse *)response
 didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
  completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential * __nullable credential))completionHandler
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 /* Sent if a task requires a new, unopened body stream.  This may be
@@ -138,7 +149,7 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
  needNewBodyStream:(void (^)(NSInputStream * __nullable bodyStream))completionHandler
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 /* Sent periodically to notify the delegate of upload progress.  This
@@ -150,7 +161,7 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
     totalBytesSent:(int64_t)totalBytesSent
 totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 /* Sent as the last message related to a specific task.  Error may be
@@ -160,15 +171,30 @@ totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
 didCompleteWithError:(nullable NSError *)error
 {
-    
+    NSLog(@"%s   -- %@",__func__,error);
 }
 
 #pragma mark NSURLSessionDownloadDelegate
-//必须实现
+//必须实现   下载完成
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
 didFinishDownloadingToURL:(NSURL *)location
 {
+    NSLog(@"%s",__func__);
     
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSArray *URLs = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    NSURL *documentsDirectory = URLs[0];
+    
+    NSURL *destinationPath = [documentsDirectory URLByAppendingPathComponent:[location lastPathComponent]];
+    NSError *error;
+    
+    // Make sure we overwrite anything that's already there
+    [fileManager removeItemAtURL:destinationPath error:NULL];
+    BOOL success = [fileManager copyItemAtURL:location toURL:destinationPath error:&error];
+    if (success) {
+        NSLog(@"图片转移成功");
+    }
 }
 
 
@@ -179,7 +205,8 @@ didFinishDownloadingToURL:(NSURL *)location
  totalBytesWritten:(int64_t)totalBytesWritten
 totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
 {
-    
+    double curpro = totalBytesWritten/(double)totalBytesExpectedToWrite;
+    NSLog(@"当前下载了：%f%%",curpro*100);
 }
 
 /* Sent when a download has been resumed. If a download failed with an
@@ -192,7 +219,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
  didResumeAtOffset:(int64_t)fileOffset
 expectedTotalBytes:(int64_t)expectedTotalBytes
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 @end

@@ -44,7 +44,8 @@
 
 -(void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler
 {
-     self.backgroundURLSessionCompletionHandler = completionHandler; 
+    //https://github.com/ShinobiControls/iOS7-day-by-day
+     self.backgroundURLSessionCompletionHandler = completionHandler;
 }
 
 @end

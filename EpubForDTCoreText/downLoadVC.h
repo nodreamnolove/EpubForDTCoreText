@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface downLoadVC : UIViewController
-
+@property (strong, nonatomic, readonly) NSURLSession *backgroundSession;
 @end
