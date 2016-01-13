@@ -13,6 +13,7 @@
 		AE8285131C41FDA800413A70 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8285121C41FDA800413A70 /* libxml2.2.tbd */; };
 		AE8285161C42043300413A70 /* GetXMLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8285151C42043300413A70 /* GetXMLObject.m */; };
 		AE8285181C42544100413A70 /* iOS应用逆向工程.epub in Resources */ = {isa = PBXBuildFile; fileRef = AE8285171C42544100413A70 /* iOS应用逆向工程.epub */; };
+		AEB6B4B01C454DD7007FCABE /* downLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB6B4AF1C454DD7007FCABE /* downLoadVC.m */; };
 		AED352241C3EB20600BEE03B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED352231C3EB20600BEE03B /* CoreGraphics.framework */; };
 		AEFD5C751C32873800F4DDB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFD5C741C32873800F4DDB2 /* main.m */; };
 		AEFD5C781C32873800F4DDB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFD5C771C32873800F4DDB2 /* AppDelegate.m */; };
@@ -51,6 +52,8 @@
 		AE8285141C42043300413A70 /* GetXMLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetXMLObject.h; path = ../GetXMLObject.h; sourceTree = "<group>"; };
 		AE8285151C42043300413A70 /* GetXMLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetXMLObject.m; path = ../GetXMLObject.m; sourceTree = "<group>"; };
 		AE8285171C42544100413A70 /* iOS应用逆向工程.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iOS应用逆向工程.epub"; sourceTree = "<group>"; };
+		AEB6B4AE1C454DD7007FCABE /* downLoadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = downLoadVC.h; sourceTree = "<group>"; };
+		AEB6B4AF1C454DD7007FCABE /* downLoadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = downLoadVC.m; sourceTree = "<group>"; };
 		AED352231C3EB20600BEE03B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AEFD5C701C32873800F4DDB2 /* EpubForDTCoreText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EpubForDTCoreText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEFD5C741C32873800F4DDB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 		AEFD5C721C32873800F4DDB2 /* EpubForDTCoreText */ = {
 			isa = PBXGroup;
 			children = (
+				AEB6B4AE1C454DD7007FCABE /* downLoadVC.h */,
+				AEB6B4AF1C454DD7007FCABE /* downLoadVC.m */,
 				04B9F32C1C4010800037FB7A /* EpubMainViewController.h */,
 				04B9F32D1C4010800037FB7A /* EpubMainViewController.m */,
 				AE8285141C42043300413A70 /* GetXMLObject.h */,
@@ -259,6 +264,11 @@
 					AEFD5C6F1C32873800F4DDB2 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 5E27AV4V35;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					AEFD5C881C32873800F4DDB2 = {
 						CreatedOnToolsVersion = 7.2;
@@ -360,6 +370,7 @@
 				AEFD5C781C32873800F4DDB2 /* AppDelegate.m in Sources */,
 				AEFD5C751C32873800F4DDB2 /* main.m in Sources */,
 				04B9F32E1C4010800037FB7A /* EpubMainViewController.m in Sources */,
+				AEB6B4B01C454DD7007FCABE /* downLoadVC.m in Sources */,
 				AE8285161C42043300413A70 /* GetXMLObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

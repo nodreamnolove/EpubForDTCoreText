@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "EpubMainViewController.h"
 #import "ZipArchive.h"
+//@"shengcai123" 密码
+//http://www.100eshu.com/uploads/ebook/b2f9a6fe1b1a4a159dd39fe38b09ac24/mobile/b2f9a6fe1b1a4a159dd39fe38b09ac24.zip
 @interface ViewController ()
 
 @end
@@ -25,13 +27,15 @@
 //    [goEpubBtn addTarget:self action:@selector(goEpub) forControlEvents:UIControlEventTouchUpInside];
 //    [self.view addSubview:goEpubBtn];
 //    self.view.backgroundColor = [UIColor redColor];
+    UIBarButtonItem *rightBarBut1 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(netClick)];
     UIBarButtonItem *rightBarBut = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(goEpub)];
-    self.navigationItem.rightBarButtonItem = rightBarBut;
+    self.navigationItem.rightBarButtonItems = @[rightBarBut1,rightBarBut];
     
 }
+
+
 -(void)goEpub
 {
- 
     NSString *filepath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]stringByAppendingPathComponent:@"iOS应用逆向工程"];
     NSString *sourceFile = [[NSBundle mainBundle]pathForResource:@"iOS应用逆向工程" ofType:@"epub"];
     if ([[NSFileManager defaultManager]fileExistsAtPath:sourceFile]) {
@@ -49,6 +53,11 @@
         [self.navigationController pushViewController:epubVC animated:YES];
     }
     
+}
+
+-(void)netClick
+{
+    NSLog(@"%s",__FUNCTION__);
 }
 
 
